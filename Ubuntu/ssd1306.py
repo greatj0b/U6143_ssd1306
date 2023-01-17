@@ -1,7 +1,7 @@
 import ctypes
 import time
 
-OLED = ctypes.CDLL('./OLED.so')
+OLED = ctypes.CDLL('/home/gr3atj0b/pi_lcd/Ubuntu/OLED.so')
 
 OLED.ssd1306_begin(0x00,0X3C)
 
