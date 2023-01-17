@@ -1,0 +1,14 @@
+Description=pi lcd service
+
+Wants=network.target
+After=syslog.target network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/gr3atj0b/pi_lcd/U6143_ssd1306/Ubuntu/ssd1306.py
+Restart=on-failure
+RestartSec=10
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
